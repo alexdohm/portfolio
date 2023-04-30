@@ -2,10 +2,11 @@
   <div class="row justify-center q-col-gutter-x-md">
     <div class="col-8 col-sm-5 col-md-3 col-xl-2 q-mb-md q-mb-md-none">
       <q-img
+          no-spinner
           :src="imageSrc"
       />
     </div>
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-left q-gutter-lg">
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-left q-gutter-lg q-mb-md q-mb-md-none">
       <div>
         Hi, I'm Alex, a Full Stack developer from the USA living in Berlin. I have over 5 years of experience designing,
         building and deploying websites and databases. I have degrees in Computer Science and Mechanical Engineering and

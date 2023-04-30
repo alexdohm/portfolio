@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpr fFf">
+  <q-layout view="hHh lpR fFf">
     <q-header elevated class="bg-primary text-white">
       <q-toolbar>
         <q-avatar>
@@ -14,18 +14,26 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="rightDrawerOpen" side="right" behavior="mobile" bordered>
-      <div>
-        <router-link to="/portfolio" @click="toggleRightDrawer">Portfolio</router-link>
-      </div>
-      <div>
-        <router-link to="/contact" @click="toggleRightDrawer">Contact</router-link>
-      </div>
+    <q-drawer v-model="rightDrawerOpen" side="right" overlay bordered>
+      <!-- drawer content -->
     </q-drawer>
+
     <q-page-container>
-      <router-view/>
+      <router-view />
     </q-page-container>
+
   </q-layout>
+
+
+<!--    <q-drawer v-model="rightDrawerOpen" side="right" behavior="mobile" bordered>-->
+<!--      <div>-->
+<!--        <router-link to="/portfolio" @click="toggleRightDrawer">Portfolio</router-link>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <router-link to="/contact" @click="toggleRightDrawer">Contact</router-link>-->
+<!--      </div>-->
+<!--    </q-drawer>-->
+
 </template>
 
 <script setup lang="ts">
