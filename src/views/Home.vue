@@ -6,7 +6,7 @@
           :src="imageSrc"
       />
     </div>
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-left q-gutter-lg q-mb-md q-mb-md-none">
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-left q-gutter-lg q-mb-xl q-mb-md-none">
       <div>
         Hi, I'm Alex, a Full Stack developer from the USA living in Berlin. I have over 5 years of experience designing,
         building and deploying websites and databases. I have degrees in Computer Science and Mechanical Engineering and
