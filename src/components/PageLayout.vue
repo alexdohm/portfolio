@@ -6,7 +6,11 @@
           <q-btn to="/" label="AD"/>
         </q-avatar>
         <q-space/>
-        <q-btn v-if="$q.screen.gt.xs" flat dense no-wrap to="/portfolio" icon="data_object" no-caps label="Portfolio"
+        <q-btn v-if="$q.screen.gt.xs" flat dense no-wrap to="/portfolio" icon="o_article" no-caps label="Portfolio"
+               class="q-ml-sm q-px-md"/>
+        <q-btn v-if="$q.screen.gt.xs" flat dense no-wrap href="https://www.linkedin.com/in/alexdohm/" target="_blank" icon="o_account_circle" no-caps label="Resume"
+               class="q-ml-sm q-px-md"/>
+        <q-btn v-if="$q.screen.gt.xs" flat dense no-wrap to="/about" icon="o_sentiment_very_satisfied" no-caps label="About"
                class="q-ml-sm q-px-md"/>
         <q-btn v-if="$q.screen.gt.xs" flat dense no-wrap to="/contact" icon="o_contact_page" no-caps label="Contact"
                class="q-ml-sm q-px-md"/>

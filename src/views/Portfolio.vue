@@ -2,15 +2,15 @@
   <page-title>
     Portfolio
     <template #description>
-      Displayed are websites that I built from the ground up. I also was involved with each in UX, design and deployment.
+      For each websites that I built from the ground up. For each one I was also involved in UX, design and deployment.
     </template>
   </page-title>
   <div class="q-pa-md">
-    <div class="text-left q-pb-md">
-      <q-checkbox v-model="showTechnicalView" label="Show Code Stack"/>
-    </div>
-    <div class="q-col-gutter-md row items-start">
-      <div class="col-12 col-sm-6" v-for="project in projects" :key="project.id">
+    <div class="q-col-gutter-lg row justify-center items-start">
+      <div class="col-12 col-md-10 text-left">
+        <q-checkbox v-model="showTechnicalView" label="Show Code Stack"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-5" v-for="project in projects" :key="project.id">
 <!--        <div class="q-pt-lg q-pb-md">{{project.text}}</div>-->
         <q-img :src="project.image"
                no-spinner
@@ -24,10 +24,10 @@
                @mouseenter="showInfo = project.id"
                @mouseleave="showInfo = 0"
         >
-          <div v-show="showInfo === project.id" class="absolute-full text-subtitle2 flex flex-center">
-            {{project.text}}
+          <div v-show="showInfo === project.id" class="absolute-full text-subtitle1 flex flex-center">
+            <span class="project-description q-pa-sm rounded-borders">{{project.text}}</span>
           </div>
-          <div v-if="showTechnicalView" class="absolute-full text-subtitle2">
+          <div v-if="showTechnicalView" class="absolute-bottom text-subtitle2">
             <q-table
                 hide-header
                 hide-bottom
@@ -116,7 +116,7 @@ const showTechnicalView = ref(false);
 const projects: Ref<Project[]> = ref([
   {
     id: 1,
-    image: "images/portfolio/isotronic.png",
+    image: "images/portfolio/central.png",
     link: "https://central.isotronic.io",
     text: "SaaS Platform for QC Software in the Parma Industry",
     front: "Vue 3 | Javascript | Bootstrap",
@@ -135,7 +135,7 @@ const projects: Ref<Project[]> = ref([
   {
     id: 3,
     image: "images/portfolio/isotronic.png",
-    link: "https://google.com",
+    link: "https://github.com/alexdohm/portfolio",
     text: "My Portfolio [ The site you are currently on ]",
     front: "Vue 3 | Typescript | Quasar | Pinia | Vite",
   },
@@ -155,4 +155,9 @@ const projects: Ref<Project[]> = ref([
 
 .portfolio-image
   border: 1px solid darkgrey
+
+.q-img__content
+  > div
+    background: rgba(0, 0, 0, 0.8)!important
+
 </style>
